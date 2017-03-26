@@ -1,0 +1,250 @@
+/* RESOURCES */
+.build {
+	background-image: url(../images/helmet.png);
+}
+.pay {
+	background-image: url(../images/coin.png);
+}
+.cargo {
+	background-image: url(../images/shipBox.png);
+	background-size: 80% !important;
+}
+.fly {
+	background-image: url(../images/flyBox.png);
+	background-size: 80% !important;
+}
+.repair {
+	background-image: url(../images/helmet2.png);
+}
+.epic {
+	background-image: url(../images/epic.png);
+	background-size: 80% !important;
+}
+.goldKey {
+	background-image: url(../images/goldKey.png);
+}
+.epicRes {
+	background-image: url(../images/epic.png);
+}
+.metal {
+	background-image: url(../images/metal.png);
+}
+.madeira {
+	background-image: url(../images/madera.png);
+}
+.plastico {
+	background-image: url(../images/plastico.png);
+}
+.semente {
+	background-image: url(../images/semillas.png);
+}
+.prego {
+	background-image: url(../images/clavos.png);
+}
+.minerio {
+	background-image: url(../images/minerales.png);
+}
+.quimico {
+	background-image: url(../images/quimicos.png);
+}
+.racao {
+	background-image: url(../images/animales.png);
+}
+.tabua {
+	background-image: url(../images/tablas.png);
+}
+.tijolo {
+	background-image: url(../images/ladrillos.png);
+}
+.cimento {
+	background-image: url(../images/cemento.png);
+}
+.martelo {
+	background-image: url(../images/martillo.png);
+}
+.trena {
+	background-image: url(../images/metro.png);
+}
+.pa {
+	background-image: url(../images/pala.png);
+}
+.hortalica {
+	background-image: url(../images/verduras.png);
+}
+.creme {
+	background-image: url(../images/nata.png);
+}
+.cadeira {
+	background-image: url(../images/silla.png);
+}
+.mesa {
+	background-image: url(../images/mesa.png);
+}
+.cola {
+	background-image: url(../images/pegamento.png);
+}
+.tecido {
+	background-image: url(../images/seda.png);
+}
+.acucar {
+	background-image: url(../images/especias.png);
+}
+.cozinha {
+	background-image: url(../images/cocina.png);
+}
+.farinha {
+	background-image: url(../images/harina.png);
+}
+.vidro {
+	background-image: url(../images/cristal.png);
+}
+.frutinha {
+	background-image: url(../images/frutas.png);
+}
+.cesped {
+	background-image: url(../images/cesped.png);
+}
+.arvores {
+	background-image: url(../images/arboles.png);
+}
+.jardin {
+	background-image: url(../images/jardin.png);
+}
+.donuts {
+	background-image: url(../images/donuts.png);
+}
+.batido {
+	background-image: url(../images/batido.png);
+}
+.zapatos {
+	background-image: url(../images/zapatos.png);
+}
+.gorra {
+	background-image: url(../images/gorra.png);
+}
+.reloj {
+	background-image: url(../images/reloj.png);
+}
+.pan {
+	background-image: url(../images/pan.png);
+}
+.camaebanho {
+	background-image: url(../images/tela.png);
+}
+.tinta {
+	background-image: url(../images/pintura.png);
+}
+.escada {
+	background-image: url(../images/escalera.png);
+}
+.milho {
+	background-image: url(../images/maiz.png);
+}
+.sandwich {
+	background-image: url(../images/sandwich.png);
+}
+.panecillo {
+	background-image: url(../images/panecillo.png);
+}
+.comercial {
+	background-image: url(../images/comercial.png);
+}
+.factory {
+	background-image: url(../images/factory.png);
+}
+.residential {
+	background-image: url(../images/residential.png);
+}
+.candado {
+	background-image: url(../images/candado.png);
+}
+.camara {
+	background-image: url(../images/camara.png);
+}
+.cuchara {
+	background-image: url(../images/cuchara.png);
+}
+.timon {
+	background-image: url(../images/timon.png);
+}
+.snowboard {
+	background-image: url(../images/snowboard.png);
+}
+.ropa {
+	background-image: url(../images/diseno.png);
+}
+.rejilla {
+	background-image: url(../images/rejilla.png);
+}
+.escape {
+	background-image: url(../images/escape.png);
+}
+.rueda {
+	background-image: url(../images/rueda.png);
+}
+.buceo {
+	background-image: url(../images/buceo.png);
+}
+.salvavidas {
+	background-image: url(../images/salvavidas.png);
+}
+.brujula {
+	background-image: url(../images/brujula.png);
+}
+.gorro {
+	background-image: url(../images/gorro.png);
+}
+.mando {
+	background-image: url(../images/mando.png);
+}
+.guante {
+	background-image: url(../images/guante.png);
+}
+.bateria {
+	background-image: url(../images/bateria.png);
+}
+.armario {
+	background-image: url(../images/alacena.png);
+}
+.queijo {
+	background-image: url(../images/queso.png);
+}
+.eletronico {
+	background-image: url(../images/electrico.png);
+}
+.carne {
+	background-image: url(../images/ternera.png);
+}
+.brasero {
+	background-image: url(../images/brasero.png);
+}
+.tarta {
+	background-image: url(../images/tarta.png);
+}
+.yogur {
+	background-image: url(../images/yogur.png);
+}
+.pizza {
+	background-image: url(../images/pizza.png);
+}
+.bagette {
+	background-image: url(../images/bagette.png);
+}
+.tetera {
+	background-image: url(../images/tetera.png);
+}
+.casco {
+	background-image: url(../images/casco.png);
+}
+.bolso {
+	background-image: url(../images/bolso.png);
+}
+.cabina {
+	background-image: url(../images/cabina.png);
+}
+.barbacoa {
+	background-image: url(../images/barbacoa.png);
+}
+.bonsai {
+	background-image: url(../images/close.png);
+}

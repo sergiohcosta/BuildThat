@@ -1,0 +1,116 @@
+/*hexagon list*/
+.hexamini {
+	display: inline-block;
+	background-image: url(../images/hexagon.png);
+	width: 27px;
+	height: 30px;
+	background-size:100%;
+	margin-bottom: -2px;
+	cursor: pointer;
+}
+.hexamini.max {
+	cursor: default;
+	width: 63px;
+    height: 70px;
+	pointer-events: none;
+	margin-bottom: -7px;
+}
+.resourceIcon {
+	width: 100%;
+	height: 100%;
+	background-size:90%;
+	background-repeat: no-repeat;
+	background-position-x: 45%;
+	background-position-y: 50%;
+}
+.hexamini.max .resourceIcon {
+	background-size:70%;
+}
+
+.hexagon {
+	background-image: url(../images/hexagon_build.png);
+	width: 70px;
+	height: 39px;
+	cursor: default;
+	background-size:100%;
+}
+.hexagon.producing:active {
+	-ms-transform: scale(0.9,0.9); /* IE 9 */
+	-webkit-transform: scale(0.9,0.9); /* Safari */
+	transform: scale(0.9,0.9);
+}
+.hexagon.producing {
+	cursor: pointer;
+}
+.hexagon .resourceIcon {
+	display: inline-block;
+	height: 25px;
+	width: 25px;
+	background-size: 100%;
+	margin-top: 7px;
+	margin-left: -5px;
+}
+.amountText {
+	font-family: 'arial';
+	font-weight: bold;
+	font-size: 17px;
+	color: black;
+}
+.hextext {
+	height: 25px;
+	width: 25px;
+	display: inline-block;
+	font-family: 'arial';
+	font-weight: bold;
+	font-size: 17px;
+	color: black;
+	position:relative;
+	top:-6px;
+}
+/* add, zero, substract buttons */
+.btn {
+	display: inline-block;
+	height: 20px;
+	width: 20px;
+	background-size: 100%;
+	/*cursor: pointer;*/
+}
+.btn.add {
+	background-image: url(../images/btn_add_en.png);
+}
+.btn.add:active {
+	background-image: url(../images/btn_add_press.png);
+}
+.btn.add.disabled {
+	background-image: url(../images/btn_add_dis.png);
+}
+
+.btn.sub {
+	background-image: url(../images/btn_sub_en.png);
+}
+.btn.sub:active {
+	background-image: url(../images/btn_sub_press.png);
+}
+.btn.sub.disabled {
+	background-image: url(../images/btn_sub_dis.png);
+}
+
+.btn.zer {
+	background-image: url(../images/btn_zer_en.png);
+}
+.btn.zer:active {
+	background-image: url(../images/btn_zer_press.png);
+}
+.btn.zer.disabled {
+	background-image: url(../images/btn_zer_dis.png);
+}
+
+.btn.rem {
+	background-image: url(../images/btn_rem_en.png);
+}
+.btn.rem:active {
+	background-image: url(../images/btn_rem_press.png);
+}
+.btn.rem.disabled {
+	background-image: url(../images/btn_rem_dis.png);
+}
