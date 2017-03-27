@@ -22,31 +22,33 @@
             <div class="column column-two"></div>
 
             <div class="column column-three">
-                <div class="resourcesList producao">
+              <div class="resourcesList producao">
 
-                </div>
+              </div>
             </div>
 
             <div class="column column-four"></div>
 
             <div class="column column-five">
+
+              <div class="resourcesList demanda">
+
+              </div>
             </div>
         </div>
 
 
 
         <script src="bower_components/jquery/dist/jquery.min.js"></script>
-        <script src="itens.js"></script>
+        <script src="js/itens.js"></script>
+        <script src="js/armazem.js"></script>
+        <script src="js/demanda.js"></script>
+        <script src="js/producao.js"></script>
 
         <script>
 
-            // item é um trio de nome, tempo de construcao e lista de requisitos, que é uma lista de item
-            // os items basicos tem lista de requisitos vazia
-
-
-
             function createArmazem(itens) {
-                producao_container = $(".resourcesList.armazem");
+                armazem_container = $(".resourcesList.armazem");
 
                 $.each(itens, function (key, value) {
                     //alert(key + ", " + value.fonte);
@@ -68,14 +70,39 @@
 
 
                     //alert(anexar);
-                    producao_container.append(anexar);
+                    armazem_container.append(anexar);
+                });
+            }
+
+            function createDemanda(itens) {
+                demanda_container = $(".resourcesList.demanda");
+
+                $.each(itens, function (key, value) {
+                    //alert(key + ", " + value.fonte);
+
+
+                    anexar = "<div class=\"resource fact\">";
+
+                    anexar += "<div class=\"hexagon demanda " + key + "\">";
+                    anexar += "<div class=\"resourceIcon " + key + "\"></div>";
+                    anexar += "<div class=\"hextext demanda_" + key + "\">0</div>";
+                    anexar += "</div>";
+
+                    //anexar += "<span class=\"black\">[ " + key + " ] </span><span class=\"produzir_" + key + "\">0</span><br>";
+                    anexar += "<div class=\"btn sub demanda\" item=\"" + key + "\"></div>";
+                    anexar += "<div class=\"btn zer demanda\" item=\"" + key + "\"></div>";
+                    anexar += "<div class=\"btn add demanda\" item=\"" + key + "\"></div>";
+
+                    anexar += "</div>";
+
+
+                    //alert(anexar);
+                    demanda_container.append(anexar);
                 });
             }
 
             function createProducao(itens) {
                 producao_container = $(".resourcesList.producao");
-
-                armazem_container = $(".resourcesList.armazem");
 
                 $.each(itens, function (key, value) {
                     //alert(key + ", " + value.fonte);
@@ -102,6 +129,7 @@
             }
 
             createArmazem(itens);
+            createDemanda(itens);
             createProducao(itens);
 
             function atualizarContadores() {
@@ -110,100 +138,21 @@
 
                 $.each(itens, function (key, value) {
                     $(".armazem_" + key).html(value.armazem);
-                    $(".produzir_" + key).html(value.produzir - value.armazem);
+
+                    $(".produzir_" + key).html(value.produzir);
+
+                    demanda = (value.produzir - value.armazem)>=0?value.produzir - value.armazem:0;
+
+                    $(".demanda_" + key).html(demanda);
                 });
             }
 
 
-            function itemProdAdd(item, qtde) {
-                // debug
-                alert("itemProdAdd(\"" + item + "\", " + qtde + ")");
 
-                itens[item].produzir += qtde;
 
-                // iterar por todos os prequisitos e produzi-los
 
-                if (itens[item].produzir > itens[item].armazem) {
-                    
-                    $.each(itens[item].requisito, function (key, value) {
-                        //alert(key + ", " + value);
-                        itemProdAdd(value.nome, qtde * value.qtde);
-                    });
-                }
 
-                // atualizar os contadores
-                atualizarContadores();
 
-            }
-
-            function itemArmazemAdd(item, qtde) {
-                // debug
-                //alert("itemArmazemAdd(\"" + item + "\", " + qtde + ")");
-
-                // incrementa a quantidade do item no armazem
-                itens[item].armazem += qtde;
-                //itemProdSub(item,qtde);
-
-                // atualiza os contadores
-                atualizarContadores();
-
-            }
-
-            function itemProdSub(item, qtde) {
-                // debug
-                //alert("itemProdSub(\"" + item + "\", " + qtde + ")");
-
-                itens[item].produzir -= qtde;
-
-                // iterar por todos os prequisitos e remove-los
-                $.each(itens[item].requisito, function (key, value) {
-                    itemProdSub(value.nome, qtde * value.qtde);
-                });
-
-                // atualiza os contadores;
-                atualizarContadores();
-
-            }
-
-            function itemArmazemSub(item, qtde) {
-                // debug
-                //alert("itemProdSub(\"" + item + "\", " + qtde + ")");
-
-                itens[item].armazem -= qtde;
-
-                // atualiza os contadores;
-                atualizarContadores();
-
-            }
-
-            function ItemProdZer(item) {
-                // debug
-                //alert("ItemProdZer(\"" + item + "\")");
-
-                remover = itens[item].produzir;
-                itens[item].produzir = 0;
-
-                // iterar por todos os prequisitos e remove-los
-                $.each(itens[item].requisito, function (key, value) {
-                    //alert(key + ", " + value);
-                    itemProdSub(value.nome, value.qtde * remover);
-                });
-
-                // atualiza os contadores;
-                atualizarContadores();
-
-            }
-
-            function itemArmazemZer(item) {
-                // debug
-                //alert("ItemProdZer(\"" + item + "\");
-
-                armazenado = itens[item].armazem;
-                itens[item].armazem = 0;
-
-                // atualiza os contadores
-                atualizarContadores();
-            }
 
 
 
@@ -247,6 +196,3 @@
 
     </body>
 </html>
-
-
-
