@@ -101,13 +101,13 @@
 .frutinha {
 	background-image: url(../images/frutas.png);
 }
-.cesped {
+.grama {
 	background-image: url(../images/cesped.png);
 }
-.arvores {
+.arvore {
 	background-image: url(../images/arboles.png);
 }
-.jardin {
+.moveljardim {
 	background-image: url(../images/jardin.png);
 }
 .donuts {
@@ -215,13 +215,13 @@
 .carne {
 	background-image: url(../images/ternera.png);
 }
-.brasero {
+.fogueira {
 	background-image: url(../images/brasero.png);
 }
-.tarta {
+.torta {
 	background-image: url(../images/tarta.png);
 }
-.yogur {
+.iogurte {
 	background-image: url(../images/yogur.png);
 }
 .pizza {
@@ -247,4 +247,16 @@
 }
 .bonsai {
 	background-image: url(../images/close.png);
+}
+.furadeira {
+	background-image: url(../images/furadeira.png);
+}
+.sofa {
+	background-image: url(../images/sofa.png);
+}
+.cortador {
+	background-image: url(../images/cortador.png);
+}
+.gnomo {
+	background-image: url(../images/gnomo.png);
 }
