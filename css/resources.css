@@ -110,13 +110,13 @@
 .moveljardim {
 	background-image: url(../images/jardin.png);
 }
-.donuts {
+.donut {
 	background-image: url(../images/donuts.png);
 }
-.batido {
+.smoothie {
 	background-image: url(../images/batido.png);
 }
-.zapatos {
+.tenis {
 	background-image: url(../images/zapatos.png);
 }
 .bone {
@@ -140,10 +140,10 @@
 .milho {
 	background-image: url(../images/maiz.png);
 }
-.sandwich {
+.sanduiche {
 	background-image: url(../images/sandwich.png);
 }
-.panecillo {
+.paozinho {
 	background-image: url(../images/panecillo.png);
 }
 .comercial {
@@ -218,7 +218,7 @@
 .fogueira {
 	background-image: url(../images/brasero.png);
 }
-.torta {
+.cheesecake {
 	background-image: url(../images/tarta.png);
 }
 .iogurte {
@@ -242,7 +242,7 @@
 .cabina {
 	background-image: url(../images/cabina.png);
 }
-.barbacoa {
+.churrasqueira {
 	background-image: url(../images/barbacoa.png);
 }
 .bonsai {
@@ -259,4 +259,28 @@
 }
 .gnomo {
 	background-image: url(../images/gnomo.png);
+}
+.cafe {
+	background-image: url(../images/cafe.png);
+}
+.terno {
+	background-image: url(../images/terno.png);
+}
+.mochila {
+	background-image: url(../images/mochila.png);
+}
+.burger {
+	background-image: url(../images/burger.png);
+}
+.fritas {
+	background-image: url(../images/fritas.png);
+}
+.limonada {
+	background-image: url(../images/limonada.png);
+}
+.pipoca {
+	background-image: url(../images/pipoca.png);
+}
+.geladeira {
+	background-image: url(../images/geladeira.png);
 }

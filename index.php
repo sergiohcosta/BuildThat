@@ -46,12 +46,35 @@
         <script src="bower_components/jquery.cookie/jquery.cookie.js"></script>
 
         <script src="js/cookies.js"></script>
-        <script src="js/itens.js"></script>
         <script src="js/armazem.js"></script>
         <script src="js/demanda.js"></script>
         <script src="js/producao.js"></script>
 
+        <script src="js/itens/1fabrica.js"></script>
+        <script src="js/itens/2construcao.js"></script>
+        <script src="js/itens/3ferramenta.js"></script>
+        <script src="js/itens/4agricola.js"></script>
+        <script src="js/itens/5movel.js"></script>
+        <script src="js/itens/6jardinagem.js"></script>
+        <script src="js/itens/7donutshop.js"></script>
+        <script src="js/itens/8moda.js"></script>
+        <script src="js/itens/9lanchonete.js"></script>
+        <script src="js/itens/10eletrodomestico.js"></script>
+
         <script>
+
+            const itens = Object.assign({},
+              fabrica,
+              construcao,
+              ferramenta,
+              agricola,
+              movel,
+              jardinagem,
+              donutshop,
+              moda,
+              lanchonete,
+              eletrodomestico
+            );
 
             function createArmazem(itens) {
                 armazem_container = $(".resourcesList.armazem");
@@ -183,26 +206,22 @@
             });
 
             function lengthInUtf8Bytes(str) {
-  // Matches only the 10.. bytes that are non-initial characters in a multi-byte sequence.
-  var m = encodeURIComponent(str).match(/%[89ABab]/g);
-  return str.length + (m ? m.length : 0);
-}
-            //itemProdAdd("cimento", 1);
+              // Matches only the 10.. bytes that are non-initial characters in a multi-byte sequence.
+              var m = encodeURIComponent(str).match(/%[89ABab]/g);
+              return str.length + (m ? m.length : 0);
+            }
+
             $("#salvar").click(function () {
-              itemSave = [] ;
+              itemSave = {} ;
               $.each(itens, function (key, value) {
-                //alert(key);
-                //alert(  );
-                itemSave.push({"nome":key,"armazem": value.armazem,"produzir":value.produzir});
+                itemSave[key]=value.armazem;
               });
-              //alert(itemSave.length);
 
 
                 var json_str = JSON.stringify(itemSave);
                 alert(json_str);
-                //alert(lengthInUtf8Bytes(json_str));
-                $.cookie("armazemBuildThat", itemSave);
-                //createCookie("armazemBuildThat", json_str, 30);
+                alert(lengthInUtf8Bytes(json_str));
+                $.cookie("armazemBuildThat", json_str);
             });
 
             $("#recuperar").click(function () {
@@ -210,14 +229,13 @@
                 //alert(getCookie("armazemBuildThat"));\
 
                 itemRec = $.cookie("armazemBuildThat");
-                alert(JSON.parse(itemRec));
-                $.each(itemRec, function (key, value) {
-                  alert(key);
-                  alert(value);
-                  //itemSave.push([key,value.armazem,value.produzir]);
-
-                });
-                //alert($.cookie("armazemBuildThat"));
+                parsed = JSON.parse(itemRec);
+                for (var key in parsed) {
+                  if (parsed.hasOwnProperty(key)) {
+                    //alert(key + " -> " + parsed[key]);
+                    itens[key].armazem = parsed[key];
+                  }
+                }
                 atualizarContadores();
             });
 
