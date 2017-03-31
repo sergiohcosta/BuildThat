@@ -560,6 +560,42 @@ itens = {
                 "qtde": "1"
             }
         ]
+    },
+    "bone": {
+        "fonte": "moda",
+        "tempo": "1080",
+        "produzir": 0,
+        "armazem": 0,
+        "requisito": [
+            {
+                "nome": "tecido",
+                "qtde": "2"
+            },
+            {
+                "nome": "trena",
+                "qtde": "1"
+            }
+        ]
+    },
+    "relogio": {
+        "fonte": "moda",
+        "tempo": "1080",
+        "produzir": 0,
+        "armazem": 0,
+        "requisito": [
+            {
+                "nome": "plastico",
+                "qtde": "2"
+            },
+            {
+                "nome": "vidro",
+                "qtde": "2"
+            },
+            {
+                "nome": "quimico",
+                "qtde": "1"
+            }
+        ]
     }
 
 

@@ -37,9 +37,15 @@
             </div>
         </div>
 
+        <button name="Salvar" id="salvar">Salvar!</button>
+        <button name="Recuperar" id="recuperar">Recuperar!</button>
+        <button name="Listar" id="listar">Listar!</button>
 
 
         <script src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="bower_components/jquery.cookie/jquery.cookie.js"></script>
+
+        <script src="js/cookies.js"></script>
         <script src="js/itens.js"></script>
         <script src="js/armazem.js"></script>
         <script src="js/demanda.js"></script>
@@ -147,20 +153,6 @@
                 });
             }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             $(".btn.add.producing").click(function () {
                 //alert($(this).attr("item"));
                 itemProdAdd($(this).attr("item"), 1);
@@ -189,7 +181,56 @@
                 //alert($(this).attr("item"));
                 itemArmazemZer($(this).attr("item"));
             });
+
+            function lengthInUtf8Bytes(str) {
+  // Matches only the 10.. bytes that are non-initial characters in a multi-byte sequence.
+  var m = encodeURIComponent(str).match(/%[89ABab]/g);
+  return str.length + (m ? m.length : 0);
+}
             //itemProdAdd("cimento", 1);
+            $("#salvar").click(function () {
+              itemSave = [] ;
+              $.each(itens, function (key, value) {
+                //alert(key);
+                //alert(  );
+                itemSave.push({"nome":key,"armazem": value.armazem,"produzir":value.produzir});
+              });
+              //alert(itemSave.length);
+
+
+                var json_str = JSON.stringify(itemSave);
+                alert(json_str);
+                //alert(lengthInUtf8Bytes(json_str));
+                $.cookie("armazemBuildThat", itemSave);
+                //createCookie("armazemBuildThat", json_str, 30);
+            });
+
+            $("#recuperar").click(function () {
+                //alert($(this).attr("item"));
+                //alert(getCookie("armazemBuildThat"));\
+
+                itemRec = $.cookie("armazemBuildThat");
+                alert(JSON.parse(itemRec));
+                $.each(itemRec, function (key, value) {
+                  alert(key);
+                  alert(value);
+                  //itemSave.push([key,value.armazem,value.produzir]);
+
+                });
+                //alert($.cookie("armazemBuildThat"));
+                atualizarContadores();
+            });
+
+            $("#listar").click(function () {
+              var cookies = get_cookies_array();
+                for(var name in cookies) {
+                  alert( name + " : " + cookies[name] + "<br />" );
+                }
+            });
+
+
+
+
 
 
         </script>
